@@ -7,7 +7,6 @@
 
 
 from abc import ABCMeta, abstractmethod
-from py_compile import main
 
 
 class Payment(metaclass=ABCMeta):
