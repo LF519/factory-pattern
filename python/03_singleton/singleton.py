@@ -8,8 +8,6 @@
     单例相当于全局变量, 但防止了命名空间被污染
 """
 
-from abc import abstractmethod, ABCMeta
-
 
 class Singleton():
     def __new__(cls, *args, **kwargs):
@@ -17,6 +15,7 @@ class Singleton():
             # 调用父类的__new__方法创建一个实例, 父类是Object
             cls._instance = super(Singleton, cls).__new__(cls)
         return cls._instance
+
 
 class Myclass(Singleton):
     def __init__(self, a) -> None:
