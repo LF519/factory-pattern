@@ -18,6 +18,7 @@ from abc import ABCMeta, abstractmethod
 class Shape(metaclass=ABCMeta):
     """图形接口, 抽象"""
 
+    # 在抽象中绑定实现者
     def __init__(self, color):
         self.color = color
 
@@ -28,6 +29,7 @@ class Shape(metaclass=ABCMeta):
 
 class Color(metaclass=ABCMeta):
     """颜色接口, 实现者"""
+
     @abstractmethod
     def paint(self, shape):
         pass
